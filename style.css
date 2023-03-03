@@ -1,0 +1,153 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+nav{
+  background-image: url(/eb2e706235473ef2a6b358a89b65a504a0f43b2c.jpg);
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav__title--wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.nav__title{
+  color: white;
+  font-size: 48px;
+}
+
+.nav__search--wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.nav__search{
+  display: flex;
+  align-items: center;
+  height: 48px;
+  font-size: 24px;
+}
+
+/* main */
+
+main{
+  margin-top: 56px;
+}
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  width: calc(33.33% - 20px);
+  flex-basis: calc(33.33% - 20px);
+  margin-right: 24px;
+  margin-bottom: 24px
+}
+
+
+.game-card img {
+  max-width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+
+.game-details {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.game-details h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.game-details p {
+  margin: 10px 0;
+}
+
+.play-now-btn {
+  background-color: #1dcaff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.play-now-btn:hover {
+  background-color: #17b8e0;
+  cursor: pointer;
+}
+
+
+/* media  */
+
+
+/* For screens smaller than 600px (small phones) */
+@media (max-width: 600px) {
+  .nav__title {
+    font-size: 32px;
+  }
+  .nav__search {
+    font-size: 16px;
+  }
+  .game-card {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+    flex-basis: 100%;
+  }
+}
+
+/* For screens between 600px and 900px (large phones and small tablets) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .nav__title {
+    font-size: 40px;
+  }
+  .nav__search {
+    font-size: 20px;
+  }
+  .game-card {
+    width: calc(50% - 16px);
+    margin-right: 16px;
+    margin-bottom: 16px;
+    flex-basis: calc(50% - 16px);
+  }
+}
+
+/* For screens larger than 900px (tablets and desktops) */
+@media (min-width: 900px) {
+  .nav__title {
+    font-size: 48px;
+  }
+  .nav__search {
+    font-size: 24px;
+  }
+  .game-card {
+    width: calc(33.33% - 24px);
+    margin-right: 24px;
+    margin-bottom: 24px;
+    flex-basis: calc(33.33% - 24px);
+  }
+}
